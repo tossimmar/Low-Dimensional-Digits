@@ -23,7 +23,9 @@ We present a derivation and implementation of a supervised dimensionality reduct
 
 - **cli.py**: Command-line interface. 
 
-- **main.py**: Application of the algorithm to the [Digits](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html) dataset to visualize 8x8 pixel images of hand-written digits as points in a 1, 2, or 3-dimensional space.  
+- **main.py**: Application of the algorithm to the [Digits](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html) dataset to visualize 8x8 pixel images of hand-written digits as points in a 1, 2, or 3-dimensional space.
+
+- **environment.yml**: Specifications and dependencies required to set up an environment for this project.
 
 # Command-Line Interface
 
