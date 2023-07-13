@@ -17,7 +17,7 @@ def get_args():
 		'--k_folds', 
 		type=int, 
 		default=5, 
-		help='Number of cross-validation folds used to define Bayesian hyper-parameter optimization objective function'
+		help='Specifies the Bayesian hyper-parameter optimization objective function given by average k-fold cross-validation classification accuracy'
 	)
 
 	parser.add_argument(
@@ -73,7 +73,7 @@ def get_args():
 		'--gamma_range', 
 		nargs='+', 
 		type=float,
-		help='Lower and upper bounds on the polynomial, sigmoid, rbf, laplacian, and chi-squared kernels' gamma hyper-parameter'
+		help="Lower and upper bounds on the polynomial, sigmoid, rbf, laplacian, and chi-squared kernels' gamma hyper-parameter"
 	)
 
 	parser.add_argument(
@@ -81,7 +81,7 @@ def get_args():
 		'--coef0_range', 
 		nargs='+', 
 		type=float,
-		help='Lower and upper bounds on the polynomial and sigmoid kernels' coef0 hyper-parameter'
+		help="Lower and upper bounds on the polynomial and sigmoid kernels' coef0 hyper-parameter"
 	)
 
 	parser.add_argument(
