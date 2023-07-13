@@ -17,7 +17,7 @@ def get_args():
 		'--k_folds', 
 		type=int, 
 		default=5, 
-		help='Number of cross-validation folds'
+		help='Number of cross-validation folds used to define Bayesian hyper-parameter optimization objective function'
 	)
 
 	parser.add_argument(
@@ -49,7 +49,7 @@ def get_args():
 		'--reg_param_range', 
 		nargs='+', 
 		type=float, 
-		help='Lower and upper bounds on the regularization parameter'
+		help='Lower and upper bounds on the regularization hyper-parameter'
 	)
 
 	parser.add_argument(
@@ -57,7 +57,7 @@ def get_args():
 		'--kernel', 
 		type=str, 
 		choices=['chi2', 'linear', 'polynomial', 'rbf', 'laplacian', 'sigmoid', 'cosine'], 
-		help='The kernel function'
+		help='Kernel function'
 	)
 
 	parser.add_argument(
@@ -65,7 +65,7 @@ def get_args():
 		'--degree_range', 
 		nargs='+', 
 		type=int,
-		help='Lower and upper bounds on the degree parameter'
+		help='Lower and upper bounds on the polynomial kernel degree hyper-parameter'
 	)
 
 	parser.add_argument(
@@ -73,7 +73,7 @@ def get_args():
 		'--gamma_range', 
 		nargs='+', 
 		type=float,
-		help='Lower and upper bounds on the gamma parameter'
+		help='Lower and upper bounds on the polynomial, sigmoid, rbf, laplacian, and chi-squared kernels' gamma hyper-parameter'
 	)
 
 	parser.add_argument(
@@ -81,14 +81,14 @@ def get_args():
 		'--coef0_range', 
 		nargs='+', 
 		type=float,
-		help='Lower and upper bounds on the coef0 parameter'
+		help='Lower and upper bounds on the polynomial and sigmoid kernels' coef0 hyper-parameter'
 	)
 
 	parser.add_argument(
 		'-nt', 
 		'--n_trials', 
 		type=int, 
-		help='Number of hyper-parameter optimization trials'
+		help='Number of Bayesian hyper-parameter optimization trials'
 	)
 
 	return parser.parse_args()
