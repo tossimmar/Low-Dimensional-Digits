@@ -81,7 +81,7 @@ def main():
 	neg_projections = valid_projections[y_valid != predictions]
 	
 	scatter.save_html(
-		filename='kfda-valid-plot', 
+		filename='kfda-test-plot', 
 		labels=pos_labels, 
 		x=pos_projections     if model.output_dim == 1      else pos_projections[:, 0], 
 		y=None                if model.output_dim == 1      else pos_projections[:, 1], 
